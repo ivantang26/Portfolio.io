@@ -177,6 +177,44 @@ test('home and grid/list layouts fit 320–1920px; no external resources are loa
   await page.close();
 });
 
+test('Google Maps stays private until requested and uses the supplied location link', async () => {
+  const page = await newPage({ viewport: { width: 390, height: 844 } });
+  const requests = [];
+  await page.route(url => url.href.startsWith('https://www.google.com/maps?'), async route => {
+    requests.push(route.request().url());
+    await route.fulfill({ status: 200, contentType: 'text/html; charset=utf-8', body: '<!doctype html><html lang="en"><head><title>Mock map</title></head><body>Interactive Google Maps mock</body></html>' });
+  });
+  await page.goto(base + '/#contact');
+
+  const mapLink = page.locator('.map-external-link');
+  const supplied = 'https://www.google.com/maps?cid=8437973578955834426&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&hl=en&gl=BD&source=embed';
+  assert.equal(await mapLink.getAttribute('href'), supplied);
+  assert.equal(await page.locator('#google-map-stage iframe').count(), 0);
+  assert.equal(requests.length, 0, 'The Google Map must not load before the visitor requests it.');
+  await axe(page, 'Google Maps placeholder / 390px');
+
+  const button = page.locator('[data-map-load]');
+  const embed = new URL(await button.getAttribute('data-map-embed'));
+  assert.equal(embed.origin, 'https://www.google.com');
+  assert.equal(embed.searchParams.get('cid'), '8437973578955834426');
+  assert.equal(embed.searchParams.get('output'), 'embed');
+  await button.click();
+  await page.waitForFunction(() => document.querySelector('#google-map-stage iframe')?.contentWindow);
+  await page.waitForFunction(() => document.querySelector('[data-map-status]').textContent.includes('ready'));
+
+  const iframe = page.locator('#google-map-stage iframe');
+  assert.equal(await iframe.getAttribute('title'), 'Google Maps interactive map showing the shared location');
+  assert.equal(await iframe.getAttribute('referrerpolicy'), 'no-referrer-when-downgrade');
+  assert.equal(await iframe.getAttribute('loading'), 'lazy');
+  assert.equal(await button.isDisabled(), true);
+  assert.equal(await button.getAttribute('aria-pressed'), 'true');
+  assert.equal(requests.length, 1);
+  assert.equal(await page.frameLocator('#google-map-stage iframe').locator('body').innerText(), 'Interactive Google Maps mock');
+  await noOverflow(page, 'contact map / 390px');
+  await axe(page, 'Google Maps loaded / 390px');
+  await page.close();
+});
+
 test('email draft validation, safe encoding, and stale-draft invalidation', async () => {
   const page = await newPage();
   await page.goto(base + '/#contact');
@@ -234,6 +272,9 @@ test('no-JavaScript and direct-file previews retain all content and project link
   await page.goto(base);
   assert.equal(await visibleCount(page), 25);
   assert.equal(await page.locator('.project-tools').isVisible(), false);
+  assert.equal(await page.locator('[data-map-load]').isVisible(), false);
+  assert.match(await page.locator('.map-external-link').getAttribute('href'), /cid=8437973578955834426/);
+  assert.equal(await page.locator('#google-map-stage iframe').count(), 0);
   assert.equal(await page.locator('[data-form]').getAttribute('action'), 'mailto:ivantang26official@gmail.com');
   await page.locator('[data-project="orbit"] a').click();
   assert.equal(await page.locator('h1').textContent(), 'Orbit');

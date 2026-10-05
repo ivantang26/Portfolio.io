@@ -189,6 +189,33 @@
     });
   }
 
+  // The map makes no third-party connection unless the visitor explicitly loads it.
+  const mapButton = document.querySelector('[data-map-load]');
+  const mapStage = document.querySelector('[data-map-stage]');
+  const mapStatus = document.querySelector('[data-map-status]');
+  if (mapButton && mapStage && mapStatus) {
+    mapButton.addEventListener('click', () => {
+      let embed;
+      try { embed = new URL(mapButton.dataset.mapEmbed); } catch { return; }
+      if (embed.origin !== 'https://www.google.com' || !embed.pathname.startsWith('/maps')) return;
+
+      const frame = document.createElement('iframe');
+      frame.title = 'Google Maps interactive map showing the shared location';
+      frame.loading = 'lazy';
+      frame.referrerPolicy = 'no-referrer-when-downgrade';
+      frame.allowFullscreen = true;
+      frame.addEventListener('load', () => {
+        mapStatus.textContent = 'Google Maps is ready. Use the map controls to explore the shared location.';
+      }, { once: true });
+      frame.src = embed.href;
+      mapStage.replaceChildren(frame);
+      mapButton.disabled = true;
+      mapButton.setAttribute('aria-pressed', 'true');
+      mapButton.textContent = 'Map loaded';
+      mapStatus.textContent = 'Google Maps is opening. Map controls will be available below.';
+    });
+  }
+
   document.querySelectorAll('.project-media img, .case-image img').forEach(image => {
     const unavailable = () => { image.hidden = true; image.closest('figure').classList.add('image-unavailable'); };
     image.addEventListener('error', unavailable);

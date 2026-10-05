@@ -2,7 +2,7 @@
 
 A rewritten, responsive portfolio covering **all 13 projects in `Sample-Portfolio` and all 12 original portfolio entries**. The site includes searchable/filterable project cards, grid and list layouts, 25 individual project pages, an about section, experience and education, and an email-draft contact form.
 
-**Runtime:** static HTML, CSS, and vanilla JavaScript. No framework, CDN, server API, or runtime npm dependency is needed.
+**Runtime:** static HTML, CSS, and vanilla JavaScript. No framework, automatic third-party requests, server API, or runtime npm dependency is needed. The interactive Google Map connects only when the visitor chooses to load it.
 
 ## Open the website
 
@@ -104,6 +104,7 @@ Tests start their own server on an available local port and cover:
 - Layout overflow at 320, 390, 768, 1024, 1280, 1440, and 1920 pixels.
 - Mobile accessibility scans on all 25 detail pages, plus mobile and desktop homepage scans.
 - Contact errors, draft encoding, and invalidation after editing.
+- The exact supplied Google Maps place link, accessible interactive-map controls, and no Google request before an explicit load.
 - Keyboard skip/navigation links, legacy bookmarks, nested-path 404 recovery, no-JavaScript content, and direct-file browsing.
 - Browser runtime errors and failed local-resource requests.
 
@@ -125,7 +126,7 @@ Relative project, font, stylesheet, script, and image URLs already work at eithe
 
 Contact: [ivantang26official@gmail.com](mailto:ivantang26official@gmail.com).
 
-The form prepares a **mailto draft**. It does not send a message or claim success on a server. The visitor opens the draft, reviews it, and sends it using their email app. Search/filter state is kept in the URL. The portfolio uses no analytics, cookies, or third-party runtime assets.
+The form prepares a **mailto draft**. It does not send a message or claim success on a server. The visitor opens the draft, reviews it, and sends it using their email app. Search/filter state is kept in the URL. The portfolio uses no analytics or first-party tracking cookies; the Google Map makes no third-party request unless the visitor activates it. Google may process connection data or set cookies when the interactive map or external Google Maps link is opened.
 
 ## License
 

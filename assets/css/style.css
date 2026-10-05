@@ -207,6 +207,26 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
 .contact-email { display: inline-flex; flex-wrap: wrap; align-items: center; gap: .6rem; font-size: clamp(.95rem, 1.5vw, 1.35rem); color: var(--green); margin-top: 2rem; text-decoration: underline; text-underline-offset: .35em; overflow-wrap: anywhere; }
 .contact-direct { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; font-size: .8rem; color: var(--muted); margin-top: 1rem; }
 .contact-copy > .text-link { font-size: .8rem; margin-top: .6rem; }
+.map-panel { grid-column: 1 / -1; min-width: 0; padding-top: 1.75rem; border-top: 1px solid #c0c9b3; }
+.map-panel-header { display: flex; align-items: flex-end; justify-content: space-between; gap: 2rem; }
+.map-panel-copy .eyebrow { margin-bottom: .65rem; }
+.map-panel-copy h3 { font-size: clamp(1.5rem, 2.4vw, 2rem); }
+.map-panel-intro { color: var(--muted); font-size: .875rem; margin-top: .6rem; }
+.map-panel-actions { display: flex; align-items: center; justify-content: flex-end; flex-wrap: wrap; gap: .5rem 1rem; flex-shrink: 0; }
+.map-load-button { display: inline-flex; gap: .8rem; border-color: var(--green); font-size: .8125rem; }
+html:not(.js) .map-load-button { display: none; }
+.map-external-link { font-size: .8125rem; }
+.map-stage { position: relative; min-height: 22rem; aspect-ratio: 16 / 7; margin-top: 1.5rem; overflow: hidden; border: 1px solid #c5cfb9; border-radius: 6px; background: radial-gradient(ellipse at 78% 20%, #d6dfc7 0, transparent 35%), radial-gradient(ellipse at 10% 85%, #d5decb 0, transparent 36%), #e1e8d7; }
+.map-stage::before, .map-stage::after { position: absolute; inset: -50%; content: ""; pointer-events: none; background: repeating-linear-gradient(32deg, transparent 0, transparent 78px, rgb(51 91 67 / 8%) 79px, rgb(51 91 67 / 8%) 81px, transparent 82px, transparent 160px); }
+.map-stage::after { transform: rotate(90deg); background: repeating-linear-gradient(32deg, transparent 0, transparent 100px, rgb(51 91 67 / 7%) 101px, rgb(51 91 67 / 7%) 103px, transparent 104px, transparent 184px); }
+.map-placeholder { position: absolute; z-index: 1; inset: 0; display: grid; grid-template-columns: auto minmax(0, 1fr); align-items: center; justify-content: center; gap: clamp(1rem, 4vw, 4rem); padding: clamp(1.25rem, 5vw, 4rem); }
+.map-placeholder-icon { width: clamp(3.5rem, 9vw, 6rem); height: auto; color: var(--green); filter: drop-shadow(0 8px 10px rgb(37 69 50 / 14%)); }
+.map-placeholder-copy { max-width: 30rem; }
+.map-placeholder-copy .eyebrow { margin-bottom: .65rem; }
+.map-placeholder-copy h4 { font-size: clamp(1.3rem, 2.5vw, 2rem); }
+.map-placeholder-copy > p:last-child { margin-top: .7rem; color: #4d574a; font-size: .875rem; max-width: 43ch; }
+.map-stage iframe { position: absolute; z-index: 2; inset: 0; display: block; width: 100%; height: 100%; border: 0; background: #e1e8d7; }
+.map-privacy-note { margin-top: .65rem; color: var(--muted); font-size: .75rem; }
 .contact-form h3 { font-size: 1.35rem; }
 .form-help { font-size: .8125rem; color: var(--muted); margin-top: .7rem; max-width: 48ch; }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.5rem; }
@@ -302,6 +322,9 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
   .project-actions { justify-content: flex-start; }
 }
 @media (max-width: 900px) {
+  .map-stage { min-height: min(22rem, 38vw); }
+  .map-panel-header { align-items: flex-start; flex-direction: column; gap: 1rem; }
+  .map-panel-actions { justify-content: flex-start; }
   .main-nav { gap: 1.4rem; }
   .hero { grid-template-columns: 1fr 1fr; }
   .hero h1 { font-size: 3.25rem; }
@@ -329,6 +352,13 @@ input::placeholder, textarea::placeholder { color: var(--muted); opacity: 1; }
 }
 @media (max-width: 700px) {
   html { scroll-padding-top: 9rem; }
+  .map-panel-header { align-items: flex-start; flex-direction: column; gap: 1rem; }
+  .map-panel-actions { justify-content: flex-start; }
+  .map-stage { min-height: 18rem; aspect-ratio: 1 / 1; }
+  .map-placeholder { grid-template-columns: 1fr; justify-items: center; align-content: center; text-align: center; gap: .8rem; }
+  .map-placeholder-copy .eyebrow { font-size: .625rem; }
+  .map-placeholder-copy > p:last-child { font-size: .8125rem; }
+  .map-privacy-note { max-width: 56ch; }
   .wrap { width: calc(100% - 2.5rem); }
   .header-inner { flex-wrap: wrap; gap: 0; padding-top: .65rem; padding-bottom: .3rem; }
   .wordmark { font-size: 1.35rem; }

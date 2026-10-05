@@ -30,25 +30,27 @@ The previous four-view sidebar layout has been rewritten as an image-led, single
 - Shareable query parameters preserve category, style, search, and layout choices. Browser navigation restores the controls and results.
 - Reduced-motion preferences disable decorative movement. Keyboard focus is visible, navigation moves focus, and status updates are announced.
 - The form is an explicit email-draft handoff, with inline validation and correctly encoded content. Editing invalidates the old draft.
+- The supplied Google Maps location is available as both a direct link and an accessible interactive embed. It makes no Google request until a visitor chooses to load it; the privacy disclosure distinguishes the map provider’s practices from site-set tracking cookies.
 - The old icon CDN dependency and inactive template CSS are no longer loaded.
 
 ## Local verification
 
 `npm run check` confirms generated output is current, all source project folders are represented, linked assets exist, and the client script parses.
 
-`npm test` passed all nine test groups:
+`npm test` passed all ten test groups:
 
 1. 25 project entries/pages, covering 13 sample and 12 original projects.
 2. All collection and style filters, search combinations, and reset states.
 3. Query-string state, reload, history, and list-view synchronization.
 4. Every detail page at 390px, real asset/action URLs, and axe checks.
-5. Homepage grid/list overflow checks at 320, 390, 768, 1024, 1280, 1440, and 1920px; no external runtime requests.
+5. Homepage grid/list overflow checks at 320, 390, 768, 1024, 1280, 1440, and 1920px; no automatic external runtime requests.
 6. Form validation, Unicode and reserved-character encoding, and draft invalidation.
-7. Keyboard navigation, old bookmarks, and nested GitHub Pages 404 recovery.
-8. No-JavaScript content and direct-file previews.
-9. No uncaught browser exceptions or failed local-resource requests during the tests.
+7. Google Maps’ exact supplied place URL, accessible embed, and verified no-request-before-activation behavior.
+8. Keyboard navigation, old bookmarks, and nested GitHub Pages 404 recovery.
+9. No-JavaScript content and direct-file previews.
+10. No uncaught browser exceptions or failed local-resource requests during the tests.
 
-The axe run covered the homepage at 1440px and 390px and all 25 project pages at 390px: **27 scans with no reported WCAG A/AA violations**. Desktop and mobile screenshots were inspected. Test artifacts are ignored under `.test-artifacts/`.
+The axe run covered the homepage at 1440px and 390px, all 25 project pages at 390px, and both states of the contact map: **29 scans with no reported WCAG A/AA violations**. Desktop and mobile screenshots were inspected. Test artifacts are ignored under `.test-artifacts/`.
 
 These results describe this local rewrite only. The earlier template’s Lighthouse figures are not carried forward as measurements of the new website. Manual screen-reader testing, production field metrics, and exhaustive validation of the independent sample applications remain outside this portfolio rewrite.
 

@@ -429,6 +429,29 @@
           <button class="button" type="submit">Prepare an email <span aria-hidden="true">↗</span></button>
           <div class="form-result" data-form-result hidden><p role="status" data-form-status></p><a class="text-link" data-email-draft>Open email draft <span aria-hidden="true">↗</span></a><p class="field-hint">No email app? Copy your message and email the address above.</p></div>
         </form>
+        <section class="map-panel" aria-labelledby="map-title">
+          <div class="map-panel-header">
+            <div class="map-panel-copy">
+              <p class="eyebrow">A little help finding the way</p>
+              <h3 id="map-title">Find the location on Google Maps.</h3>
+              <p class="map-panel-intro">See the shared pin in Sha Tin, Hong Kong. Open it in Google Maps or load the interactive map here.</p>
+            </div>
+            <div class="map-panel-actions">
+              <button class="button map-load-button" type="button" data-map-load data-map-embed="https://www.google.com/maps?cid=8437973578955834426&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&amp;hl=en&amp;gl=BD&amp;source=embed&amp;output=embed" aria-controls="google-map-stage" aria-describedby="map-privacy-note" aria-pressed="false">
+                Load interactive map <span aria-hidden="true">↗</span>
+              </button>
+              <a class="text-link map-external-link" href="https://www.google.com/maps?cid=8437973578955834426&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAMYASAF&amp;hl=en&amp;gl=BD&amp;source=embed" target="_blank" rel="noopener noreferrer">Open Google Maps <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a>
+            </div>
+          </div>
+          <div class="map-stage" id="google-map-stage" data-map-stage>
+            <div class="map-placeholder">
+              <svg class="map-placeholder-icon" viewBox="0 0 64 64" aria-hidden="true"><path d="M32 58S12 39.1 12 26a20 20 0 1 1 40 0c0 13.1-20 32-20 32Z" fill="currentColor"/><circle cx="32" cy="26" r="7" fill="#e9eddf"/></svg>
+              <div class="map-placeholder-copy"><p class="eyebrow">YOUR DIRECTIONS, YOUR CALL</p><h4>Map when you need it.</h4><p>The map stays off until you choose to load it. Open the shared pin with the Google Maps link above, or load the interactive view.</p></div>
+            </div>
+          </div>
+          <p class="map-privacy-note" id="map-privacy-note">Loading the interactive map connects to Google Maps, which may process your connection data under its own privacy policy.</p>
+          <p class="sr-only" role="status" aria-live="polite" data-map-status>Interactive map has not been loaded.</p>
+        </section>
       </div>
     </section>
   </main>
@@ -436,7 +459,7 @@
   <footer class="site-footer wrap">
     <div class="footer-top"><a class="wordmark" href="./">ivan tang<span aria-hidden="true">✳</span></a><p>Thoughtfully designed. Carefully built.</p><a class="text-link" href="#main-content">Back to top <span aria-hidden="true">↑</span></a></div>
     <div class="footer-bottom"><p>© <span data-year>2026</span> Ivan Tang</p><div class="footer-social"><a href="https://github.com/ivantang26" target="_blank" rel="noopener noreferrer">GitHub ↗<span class="sr-only"> (new tab)</span></a><a href="https://www.linkedin.com/in/ivantang26" target="_blank" rel="noopener noreferrer">LinkedIn ↗<span class="sr-only"> (new tab)</span></a><a href="https://ivantang26.carrd.co/" target="_blank" rel="noopener noreferrer">More links ↗<span class="sr-only"> (new tab)</span></a><a href="https://www.twitter.com/ivantang26" target="_blank" rel="noopener noreferrer">X / Twitter ↗<span class="sr-only"> (new tab)</span></a></div></div>
-    <div class="legal-notes"><details><summary>Privacy</summary><p>This portfolio uses no analytics or cookies. Fonts and previews are hosted locally. Search and filter choices appear in the URL. The contact form prepares an email locally; your email app handles sending. External websites have their own privacy practices.</p></details><details><summary>About the work</summary><p>Design explorations are concept projects for fictional brands. Original portfolio entries use their supplied screenshots; unverified technology stacks and live links are not invented. Product names and third-party materials belong to their respective owners. Website source is covered by the <a href="https://github.com/ivantang26/Portfolio.io/blob/main/LICENSE">MIT license</a>.</p></details></div>
+    <div class="legal-notes"><details><summary>Privacy</summary><p>This site uses no analytics and sets no first-party tracking cookies. Fonts and previews are hosted locally. Search and filter choices appear in the URL. The contact form prepares an email locally; your email app handles sending. The Google Map is loaded only when you choose to activate it; Google may process connection data or set cookies under its own privacy policy.</p></details><details><summary>About the work</summary><p>Design explorations are concept projects for fictional brands. Original portfolio entries use their supplied screenshots; unverified technology stacks and live links are not invented. Product names and third-party materials belong to their respective owners. Website source is covered by the <a href="https://github.com/ivantang26/Portfolio.io/blob/main/LICENSE">MIT license</a>.</p></details></div>
   </footer>
 </body>
 </html>
