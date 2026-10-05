@@ -1,0 +1,17 @@
+{
+  "name": "ivan-tang-portfolio",
+  "version": "2.0.0",
+  "private": true,
+  "description": "A dependency-free static portfolio with 25 projects and generated project pages.",
+  "scripts": {
+    "dev": "node scripts/serve.mjs",
+    "build": "node scripts/build-projects.mjs",
+    "check": "node scripts/build-projects.mjs --check && node --check assets/js/script.js",
+    "test": "node --test tests/portfolio.test.mjs",
+    "capture": "node scripts/capture-previews.mjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.11.0",
+    "playwright": "^1.63.0"
+  }
+}

@@ -1,0 +1,119 @@
+[
+  {
+    "slug": "vela",
+    "url": "https://immersive-scoll-storytelling.vercel.app/configure",
+    "title": "Configure your Vela",
+    "image": "assets/images/projects/vela.jpg",
+    "capturedAt": "2026-10-05T19:17:09.089Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "orbit",
+    "url": "https://bento-grid-eight-gamma.vercel.app/",
+    "title": "Orbit: room-filling sound, nothing else in the way",
+    "image": "assets/images/projects/orbit.jpg",
+    "capturedAt": "2026-10-05T19:17:14.531Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "synapse",
+    "url": "https://dark-mode-amber-two.vercel.app/",
+    "title": "Synapse: inference at the speed of thought",
+    "image": "assets/images/projects/synapse.jpg",
+    "capturedAt": "2026-10-05T19:17:22.271Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "stackd",
+    "url": "https://neo-brutalism-red.vercel.app/",
+    "title": "Stackd — Get paid. Skip the boring bit.",
+    "image": "assets/images/projects/stackd.jpg",
+    "capturedAt": "2026-10-05T19:17:26.285Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "atelier-nord",
+    "url": "https://minimalism-ecru.vercel.app/",
+    "title": "Atelier Nord · Architects, Copenhagen",
+    "image": "assets/images/projects/atelier-nord.jpg",
+    "capturedAt": "2026-10-05T19:17:30.451Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "lumen",
+    "url": "https://glassmorphism-nine-nu.vercel.app/",
+    "title": "Lumen — See your money clearly",
+    "image": "assets/images/projects/lumen.jpg",
+    "capturedAt": "2026-10-05T19:17:35.177Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "wildroot",
+    "url": "https://hand-drawn-sage.vercel.app/",
+    "title": "Wildroot · Sourdough bakery & café",
+    "image": "assets/images/projects/wildroot.jpg",
+    "capturedAt": "2026-10-05T19:17:42.013Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "doodle-math",
+    "url": "https://claymorphism-sigma.vercel.app/",
+    "title": "Doodle Math: maths that feels like play",
+    "image": "assets/images/projects/doodle-math.jpg",
+    "capturedAt": "2026-10-05T19:17:47.128Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "the-long-field",
+    "url": "https://editorial-umber-eight.vercel.app/",
+    "title": "The Long Field — Food, farming and the people who grow what we eat",
+    "image": "assets/images/projects/the-long-field.jpg",
+    "capturedAt": "2026-10-05T19:17:51.687Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "pulse-27",
+    "url": "https://kinetic-orpin.vercel.app/",
+    "title": "PULSE 27 — 12–14 JUNE 2027 · Victoria Park, London",
+    "image": "assets/images/projects/pulse-27.jpg",
+    "capturedAt": "2026-10-05T19:17:56.447Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "loud-house",
+    "url": "https://maximalism-omega.vercel.app/",
+    "title": "Loud House: contemporary art, at volume",
+    "image": "assets/images/projects/loud-house.jpg",
+    "capturedAt": "2026-10-05T19:18:03.750Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "thermo",
+    "url": "https://neumorphism-tau.vercel.app/",
+    "title": "Thermo: your home, at your fingertips",
+    "image": "assets/images/projects/thermo.jpg",
+    "capturedAt": "2026-10-05T19:18:09.197Z",
+    "width": 1440,
+    "height": 1000
+  },
+  {
+    "slug": "static-fm",
+    "url": "https://retro-sand-pi.vercel.app/",
+    "title": "Static FM · independent internet radio",
+    "image": "assets/images/projects/static-fm.jpg",
+    "capturedAt": "2026-10-05T19:18:13.615Z",
+    "width": 1440,
+    "height": 1000
+  }
+]

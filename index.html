@@ -1,1248 +1,442 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ivan Tang - Personal Portfolio</title>
-
-  <!--
-    - favicon
-  -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!--
-    - custom css link
-  -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ivan Tang — Full-stack developer & creative technologist</title>
+  <meta name="description" content="Hong Kong-based developer and entrepreneur Ivan Tang. Explore 25 projects across AI products, web applications, mobile apps, and 13 distinctive web design styles.">
+  <meta name="theme-color" content="#f7f8f2">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ivan Tang — Thoughtful code. Human experiences.">
+  <meta property="og:description" content="25 projects. 13 design languages. A collection of useful products and expressive web experiences.">
+  <meta property="og:image" content="https://ivantang26.github.io/Portfolio.io/assets/images/my-avatar.png">
+  <meta property="og:image:alt" content="Illustrated portrait of Ivan Tang">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="./assets/css/outfit-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="./assets/css/style.css">
-
-
-  <!--
-    - google font link
-  -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-  <!--
-    Fontawesome icon link
-  -->
-  <script src="https://kit.fontawesome.com/31bd7dae4e.js" crossorigin="anonymous"></script>
+  <script src="./assets/js/script.js" defer></script>
 </head>
-
 <body>
-
-  <!--
-    - #MAIN
-  -->
-
-  <main>
-
-    <!--
-      - #SIDEBAR
-    -->
-
-    <aside class="sidebar" data-sidebar>
-
-      <div class="sidebar-info">
-
-        <figure class="avatar-box">
-          <img src="./assets/images/my-avatar.png" alt="Richard hanrick" width="80">
-        </figure>
-
-        <div class="info-content">
-          <h1 class="name" title="Richard hanrick">Ivan Tang</h1>
-
-          <p class="title">Entrepreneur & Full-stack Developer</p>
-        </div>
-
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-
-      </div>
-
-      <div class="sidebar-info_more">
-
-        <div class="separator"></div>
-
-        <ul class="contacts-list">
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-
-              <a href="mailto:richard@example.com" class="contact-link">ivantang26official@gmail.com</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="phone-portrait-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-
-              <a href="tel:+12133522795" class="contact-link">+852 9028 8272</a>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="calendar-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Birthday</p>
-
-              <time datetime="1982-06-23">Feb 6, 2002</time>
-            </div>
-
-          </li>
-
-          <li class="contact-item">
-
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
-
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-
-              <address>Sha Tin, Hong Kong</address>
-            </div>
-
-          </li>
-
-        </ul>
-
-        <div class="separator"></div>
-
-        <ul class="social-list">
-
-          <li class="social-item">
-            <a href="https://ivantang26.carrd.co/" class="social-link">
-              <i class="fa-solid fa-address-card"></i>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="www.linkedin.com/in/ivantang26" class="social-link">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="#" class="social-link">
-              <ion-icon name="logo-instagram"></ion-icon>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href ="#" class="social-link">
-              <i class="fa-brands fa-x-twitter"></i>
-            </a>
-          </li>
-
-          <li class="social-item">
-            <a href="https://wa.me/85290288272" class="social-link">
-              <i class="fa-brands fa-whatsapp"></i>
-            </a>
-          </li>
-        </ul>
-
-      </div>
-
-    </aside>
-
-
-
-
-
-    <!--
-      - #main-content
-    -->
-
-    <div class="main-content">
-
-      <!--
-        - #NAVBAR
-      -->
-
-      <nav class="navbar">
-
-        <ul class="navbar-list">
-
-          <li class="navbar-item">
-            <button class="navbar-link  active" data-nav-link>About</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Resume</button>
-          </li>
-
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Portfolio</button>
-          </li>
-
-        
-          <li class="navbar-item">
-            <button class="navbar-link" data-nav-link>Contact</button>
-          </li>
-
-        </ul>
-
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner wrap">
+      <a class="wordmark" href="./" aria-label="Ivan Tang, home">ivan tang<span aria-hidden="true">✳</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#work" data-section-link="work">Work <span class="nav-count" data-total-count>25</span></a>
+        <a href="#about" data-section-link="about">About</a>
+        <a href="#experience" data-section-link="experience">Experience</a>
+        <a href="#contact" data-section-link="contact">Let’s talk <span aria-hidden="true">↗</span></a>
       </nav>
+    </div>
+  </header>
 
-
-
-
-
-      <!--
-        - #ABOUT
-      -->
-
-      <article class="about  active" data-page="about">
-
-        <header>
-          <h2 class="h2 article-title">About me</h2>
-        </header>
-
-        <section class="about-text">
-          <p>
-            I'm Entrepreneur and Full-stack Developer from Hong Kong, working in web development and AI Machine Learning.
-            I enjoy turning complex problems into simple, beautiful and intuitive solutions.
-          </p>
-
-    
-        </section>
-
-
-        <!--
-          - service
-        -->
-
-        <section class="service">
-
-          <h3 class="h3 service-title">What i'm doing</h3>
-
-          <ul class="service-list">
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-design.svg
-                " alt="design icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web design</h4>
-
-                <p class="service-item-text">
-                  The most modern and high-quality design made at a professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Web development</h4>
-
-                <p class="service-item-text">
-                  High-quality development of sites at the professional level.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">Mobile apps</h4>
-
-                <p class="service-item-text">
-                  Professional development of applications for iOS and Android.
-                </p>
-              </div>
-
-            </li>
-
-            <li class="service-item">
-
-              <div class="service-icon-box">
-                <img src="./assets/images/ai-svgrepo-com.svg" alt="camera icon" width="40">
-              </div>
-
-              <div class="service-content-box">
-                <h4 class="h4 service-item-title">AI Machine Learning</h4>
-
-                <p class="service-item-text">
-                  Developing solutions using ML algorithms and LLM for data-driven applications.
-                </p>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-
-        <!--
-          - testimonials
-        -->
-        
-        <section class="testimonials">
-          <!--
-          <h3 class="h3 testimonials-title">Testimonials</h3>
-
-          <ul class="testimonials-list has-scrollbar">
-
-            <li class="testimonials-item">
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel lewis</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-            </li>
-
-           
-
-            
-          </ul>
-          -->
-        </section>
-        
-        <li class="testimonials-item">
-          <!--
-              <div class="content-card" data-testimonials-item>
-
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-2.png" alt="Jessica miller" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica miller</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-
-              </div>
-              -->
-            </li>
-            
-            <li class="testimonials-item">
-              <!--
-              <div class="content-card" data-testimonials-item>
-                
-                <figure class="testimonials-avatar-box">
-                  <img src="./assets/images/avatar-3.png" alt="Emily evans" width="60" data-testimonials-avatar>
-                </figure>
-
-                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily evans</h4>
-
-                <div class="testimonials-text" data-testimonials-text>
-                  <p>
-                    Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                    lot of experience
-                    and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                    consectetur adipiscing
-                    elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                  </p>
-                </div>
-              </div>
-              -->
-            </li>
-       
-      
-        <div class="modal-container" data-modal-container>
-
-          <div class="overlay" data-overlay></div>
-
-          <section class="testimonials-modal">
-            
-            <button class="modal-close-btn" data-modal-close-btn>
-              <ion-icon name="close-outline"></ion-icon>
-            </button>
-            <!--
-            <div class="modal-img-wrapper">
-              <figure class="modal-avatar-box">
-                <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
-              </figure>
-
-              <img src="./assets/images/icon-quote.svg" alt="quote icon">
-            </div>
-
-            <div class="modal-content">
-
-              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
-
-              <time datetime="2021-06-14">14 June, 2021</time>
-
-              <div data-modal-text>
-                <p>
-                  Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
-                  lot of experience
-                  and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
-                  consectetur adipiscing
-                  elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
-                </p>
-              </div>
-
-            </div>
-            -->
-          </section>
-
+  <main id="main-content" tabindex="-1">
+    <section class="hero wrap" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Independent developer · Hong Kong</p>
+        <h1 id="hero-title">Thoughtful code.<br>Human<br><em>experiences.</em></h1>
+        <p class="hero-intro">I’m Ivan, a full-stack developer and entrepreneur. I turn complex ideas into useful products—with a little personality along the way.</p>
+        <div class="hero-actions">
+          <a class="button" href="#work">Explore my work <span aria-hidden="true">↘</span></a>
+          <a class="text-link" href="#about">A little about me <span aria-hidden="true">→</span></a>
         </div>
-  
-        <!--
-          - clients
-        -->
-    
-
-        <section class="clients">
-          <!--
-          <h3 class="h3 clients-title">Clients</h3>
-
-          <ul class="clients-list has-scrollbar">
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-1-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-2-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-3-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-4-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-5-color.png" alt="client logo">
-              </a>
-            </li>
-
-            <li class="clients-item">
-              <a href="#">
-                <img src="./assets/images/logo-6-color.png" alt="client logo">
-              </a>
-            </li>
-
-          </ul>
-          -->
-        </section>
-      
-      </article>
-      
-
-
-
-
-      <!--
-        - #RESUME
-      -->
-
-      <article class="resume" data-page="resume">
-
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Education</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Hong Kong Polytechnic University</h4>
-
-              <span>2022 — 2025</span>
-
-              <p class="timeline-text">
-                Bachelor of Science (Honours) in Data Science and Analytics
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Draper University</h4>
-
-              <span>2024</span>
-
-              <p class="timeline-text">
-                Cyberport University Partnership Programme (CUPP) Bootcamp
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">HKU Space Community College</h4>
-
-              <span>2020 — 2022</span>
-
-              <p class="timeline-text">
-                Higher Diploma in Data Science
-              </p>
-
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="timeline">
-
-          <div class="title-wrapper">
-            <div class="icon-box">
-              <ion-icon name="book-outline"></ion-icon>
-            </div>
-
-            <h3 class="h3">Experience</h3>
-          </div>
-
-          <ol class="timeline-list">
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Software Engineer (Intern)</h4>
-
-              <span>Jul — Aug 2024</span>
-
-              <p class="timeline-text">
-                Developed RESTful APIs and microservices using Kotlin/Java, Kafka, and AWS infrastructure.
-              </p>
-              <p class="timeline-text">
-                Managed microservices deployment with Kubernetes and Docker; emphasized TDD practices.
-              </p>
-              <p class="timeline-text">
-                Maintained PostgreSQL and S3 storage, ensuring high-quality and maintainable code.
-              </p>
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">IT Engineer</h4>
-
-              <span>Jul — Aug 2023</span>
-
-              <p class="timeline-text">
-                Provided technical support and troubleshooting for software issues.
-              </p>
-              <p class="timeline-text">
-                Managed system installations, configurations, and maintenance.
-              </p>
-              <p class="timeline-text">
-                Assisted in user training and IT resource management.              
-              </p>
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Freelancer Developer, Full-stack</h4>
-
-              <span>Sept 2022 — Present</span>
-
-              <p class="timeline-text">
-                Designed and developed web applications with front-end and back-end integration.
-              </p>
-              <p class="timeline-text">
-                Utilized various technologies to create responsive, user-friendly interfaces.
-              </p>
-              <p class="timeline-text">
-                Managed end-to-end project delivery, ensuring client satisfaction.             
-              </p>
-            </li>
-
-          </ol>
-
-        </section>
-
-        <section class="skill">
-
-          <h3 class="h3 skills-title">My skills</h3>
-
-          <ul class="skills-list content-card">
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Web design</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Graphic design</h5>
-                <data value="70">70%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 70%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">Branding</h5>
-                <data value="90">90%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-
-            </li>
-
-            <li class="skills-item">
-
-              <div class="title-wrapper">
-                <h5 class="h5">WordPress</h5>
-                <data value="80">80%</data>
-              </div>
-
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 50%;"></div>
-              </div>
-
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-      
-
-
-
-      <!--
-        - #PORTFOLIO
-      -->
-
-      <article class="portfolio" data-page="portfolio">
-
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
-
-        <section class="projects">
-
-          <ul class="filter-list">
-
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-            <li class="filter-item">
-              <button data-filter-btn>Game development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Game development</button>
-              </li>
-            </ul>
-
-          </div>
-
-          <ul class="project-list">
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">TraderJournalGPT</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-13.png" alt="Snapchat Clone" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Snapchat Clone</h3>
-
-                <p class="project-category">App development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Interior Design</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/mementoposdashboard.png" alt="Management Dashboard" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Management Dashboard</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/fundprohk.png" alt="FundProHK" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">FundProHK</h3>
-
-                <p class="project-category">Funding Platform</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/mementopos.png" alt="Web POS" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Web POS</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpeg" alt="Not Noly Tea Weather & Tea App" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Not Noly Tea Weather & Tea App</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            
-
-            
-            
-
-            <li class="project-item active" data-filter-item data-category="game development">
-              <a href="#">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-14.png" alt="Whack-a-mole" loading="lazy">
-                </figure>
-                <h3 class="project-title">WeWa-Whack-a-mole</h3>
-                <p class="project-category">Game development</p>
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/hansgieng.png" alt="Hansgieng AI SaaS" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Hansgieng AI SaaS</h3>
-
-                <p class="project-category">AI SaaS</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/receipthy.png" alt="Receipthy" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Receipthy</h3>
-
-                <p class="project-category">AI POS System and Inventory Management System</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/illustify.png" alt="ILLUSTIFY" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">ILLUSTIFY</h3>
-
-                <p class="project-category">AI Image Generation Prompt</p>
-
-              </a>
-            </li>
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/aurawave.png" alt="AuraWave+" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">AuraWave+</h3>
-
-                <p class="project-category">AI Sound Therapy SaaS</p>
-
-              </a>
-            </li>
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #BLOG
-      -->
-
-      <article class="blog" data-page="blog">
-
-        <header>
-          <h2 class="h2 article-title">Blog</h2>
-        </header>
-
-        <section class="blog-posts">
-
-          <ul class="blog-posts-list">
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-1.jpg" alt="Design conferences in 2022" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design conferences in 2022</h3>
-
-                  <p class="blog-text">
-                    Veritatis et quasi architecto beatae vitae dicta sunt, explicabo.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-2.jpg" alt="Best fonts every designer" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Best fonts every designer</h3>
-
-                  <p class="blog-text">
-                    Sed ut perspiciatis, nam libero tempore, cum soluta nobis est eligendi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-3.jpg" alt="Design digest #80" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #80</h3>
-
-                  <p class="blog-text">
-                    Excepteur sint occaecat cupidatat no proident, quis nostrum exercitationem ullam corporis suscipit.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-4.jpg" alt="UI interactions of the week" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">UI interactions of the week</h3>
-
-                  <p class="blog-text">
-                    Enim ad minim veniam, consectetur adipiscing elit, quis nostrud exercitation ullamco laboris nisi.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-5.jpg" alt="The forgotten art of spacing" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">The forgotten art of spacing</h3>
-
-                  <p class="blog-text">
-                    Maxime placeat, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-            <li class="blog-post-item">
-              <a href="#">
-
-                <figure class="blog-banner-box">
-                  <img src="./assets/images/blog-6.jpg" alt="Design digest #79" loading="lazy">
-                </figure>
-
-                <div class="blog-content">
-
-                  <div class="blog-meta">
-                    <p class="blog-category">Design</p>
-
-                    <span class="dot"></span>
-
-                    <time datetime="2022-02-23">Fab 23, 2022</time>
-                  </div>
-
-                  <h3 class="h3 blog-item-title">Design digest #79</h3>
-
-                  <p class="blog-text">
-                    Optio cumque nihil impedit uo minus quod maxime placeat, velit esse cillum.
-                  </p>
-
-                </div>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
-
-
-
-
-      <!--
-        - #CONTACT
-      -->
-
-      <article class="contact" data-page="contact">
-
-        <header>
-          <h2 class="h2 article-title">Contact</h2>
-        </header>
-
-        <section class="mapbox" data-mapbox>
-          <figure>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29512.547698801114!2d114.17897343860155!3d22.388776376648934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340406493aeab213%3A0x7519b44385cb443a!2sSha%20Tin%2C%20Hong%20Kong!5e0!3m2!1sen!2sbd!4v1725253361155!5m2!1sen!2sbd"
-              width="400" height="300" loading="lazy"></iframe>
-          </figure>
-        </section>
-
-        <section class="contact-form">
-
-          <h3 class="h3 form-title">Contact Form</h3>
-
-          <form action="#" class="form" data-form>
-
-            <div class="input-wrapper">
-              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
-
-              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
-            </div>
-
-            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
-
-            <button class="form-btn" type="submit" disabled data-form-btn>
-              <ion-icon name="paper-plane"></ion-icon>
-              <span>Send Message</span>
-            </button>
-
-          </form>
-
-        </section>
-
-      </article>
-
+      </div>
+      <div class="hero-showcase">
+        <div class="showcase-caption"><span class="eyebrow">Different briefs. Distinct identities.</span><span aria-hidden="true">↙</span></div>
+        <a class="showcase-main" href="./projects/orbit.html" aria-label="Explore Orbit, the bento-grid smart speaker website">
+          <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>orbit / a new way to listen</span></div>
+          <img src="./assets/images/projects/orbit.jpg" alt="Orbit smart-speaker website with a modular bento layout" width="1440" height="1000" fetchpriority="high">
+          <span class="showcase-label">01 / Orbit <span>Bento grid ↗</span></span>
+        </a>
+        <a class="showcase-secondary" href="./projects/stackd.html" aria-label="Explore Stackd, the neo-brutalist invoicing website">
+          <img src="./assets/images/projects/stackd.jpg" alt="Stackd invoicing website with bold outlines and bright colours" width="1440" height="1000">
+          <span class="showcase-label">02 / Stackd <span>Neo-brutalism ↗</span></span>
+        </a>
+        <span class="showcase-stamp" aria-hidden="true">Made to work.<br>Built to feel.</span>
+      </div>
+    </section>
+
+    <div class="intro-strip wrap" aria-label="Portfolio at a glance">
+      <p><strong data-total-count>25</strong><span>projects &amp; explorations</span></p>
+      <p><strong data-style-count>13</strong><span>distinct design languages</span></p>
+      <p class="strip-note">From the first idea<br>to the final interaction.<span aria-hidden="true">✳</span></p>
     </div>
 
+    <section class="work-section wrap section-space" id="work" aria-labelledby="work-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">01 / The collection</p><h2 id="work-title">Different directions.<br>Same attention to detail.</h2></div>
+        <p class="section-intro">Websites, useful tools, and experiments in how the web can look and feel. Every project has a story.</p>
+      </div>
+      <div class="project-tools js-only">
+        <div class="filter-tabs" role="group" aria-label="Filter projects by collection">
+          <button type="button" data-category="all" aria-pressed="true">All work <span data-count="all">25</span></button>
+          <button type="button" data-category="design" aria-pressed="false">Design explorations <span data-count="design">13</span></button>
+          <button type="button" data-category="web" aria-pressed="false">Web &amp; AI <span data-count="web">8</span></button>
+          <button type="button" data-category="apps" aria-pressed="false">Applications <span data-count="apps">3</span></button>
+          <button type="button" data-category="games" aria-pressed="false">Games <span data-count="games">1</span></button>
+        </div>
+        <div class="filter-controls">
+          <div class="search-field"><label class="sr-only" for="project-search">Search projects, styles, or technologies</label><span aria-hidden="true">⌕</span><input id="project-search" type="search" placeholder="Search projects, styles, or tech…" autocomplete="off" maxlength="100"></div>
+          <div class="style-field"><label class="sr-only" for="project-style">Design style</label><select id="project-style"><option value="all">All design styles</option><!-- STYLES:START -->
+          <option value="Bento grid">Bento grid</option>
+          <option value="Claymorphism">Claymorphism</option>
+          <option value="Dark mode / neon">Dark mode / neon</option>
+          <option value="Editorial">Editorial</option>
+          <option value="Glassmorphism">Glassmorphism</option>
+          <option value="Immersive storytelling">Immersive storytelling</option>
+          <option value="Kinetic typography">Kinetic typography</option>
+          <option value="Maximalism">Maximalism</option>
+          <option value="Minimalism / Swiss">Minimalism / Swiss</option>
+          <option value="Neo-brutalism">Neo-brutalism</option>
+          <option value="Neumorphism">Neumorphism</option>
+          <option value="Organic / hand-drawn">Organic / hand-drawn</option>
+          <option value="Retro / Y2K">Retro / Y2K</option>
+        <!-- STYLES:END --></select></div>
+          <div class="view-switch" role="group" aria-label="Project layout"><button type="button" data-view="grid" aria-label="Grid view" aria-pressed="true"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 3h5v5H3zM12 3h5v5h-5zM3 12h5v5H3zM12 12h5v5h-5z"/></svg></button><button type="button" data-view="list" aria-label="List view" aria-pressed="false"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M3 4h14M3 10h14M3 16h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="collection-meta"><p id="project-count" role="status" aria-live="polite" aria-atomic="true">Showing all 25 projects</p><p>Concept builds + original portfolio work</p></div>
+      <div class="empty-state" id="empty-state" hidden><span aria-hidden="true">↳</span><h3>No projects found.</h3><p>Try a different keyword, collection, or design style.</p><button class="button" type="button" data-reset-filters>Reset filters <span aria-hidden="true">↗</span></button></div>
+      <ul class="project-grid" id="project-grid" aria-label="Project collection">
+        <!-- PROJECTS:START -->
+        <li class="project-card" data-project="vela" data-category="design" data-style="Immersive storytelling" data-search="Vela An e-bike launch told through scroll-driven assembly, a city ride, and a 3D configurator. E-bike launch experience Immersive storytelling Immersive-scoll-storytelling Astro Three.js Lenis JavaScript">
+          <a class="project-link" href="./projects/vela.html" aria-label="Explore Vela">
+            <figure class="project-media"><img src="./assets/images/projects/vela.jpg" alt="Vela e-bike configurator with a procedural bicycle model and colour options" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>01 / Immersive storytelling</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>Vela</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">An e-bike launch told through scroll-driven assembly, a city ride, and a 3D configurator.</p>
+              <div class="project-tags"><span>Astro</span><span>Three.js</span><span>Lenis</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="orbit" data-category="design" data-style="Bento grid" data-search="Orbit A modular product story with colour selection, sound demos, and a layout-aware CMS studio. Smart-speaker product website Bento grid bento-grid Next.js React TypeScript CSS Grid">
+          <a class="project-link" href="./projects/orbit.html" aria-label="Explore Orbit">
+            <figure class="project-media"><img src="./assets/images/projects/orbit.jpg" alt="Orbit product website with a dark smart-speaker hero and modular feature tiles" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>02 / Bento grid</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>Orbit</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A modular product story with colour selection, sound demos, and a layout-aware CMS studio.</p>
+              <div class="project-tags"><span>Next.js</span><span>React</span><span>TypeScript</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="synapse" data-category="design" data-style="Dark mode / neon" data-search="Synapse A dark, developer-first API website with interactive pricing, model discovery, and searchable docs. AI developer platform Dark mode / neon Dark-mode Next.js TypeScript Tailwind CSS MDX Shiki">
+          <a class="project-link" href="./projects/synapse.html" aria-label="Explore Synapse">
+            <figure class="project-media"><img src="./assets/images/projects/synapse.jpg" alt="Synapse dark API landing page with a violet headline and terminal example" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>03 / Dark mode / neon</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>Synapse</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A dark, developer-first API website with interactive pricing, model discovery, and searchable docs.</p>
+              <div class="project-tags"><span>Next.js</span><span>TypeScript</span><span>Tailwind CSS</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="stackd" data-category="design" data-style="Neo-brutalism" data-search="Stackd Freelancer invoicing with thick outlines, bright colour, and a live invoice-building demo. Freelancer invoicing website Neo-brutalism Neo-brutalism Next.js React TypeScript Tailwind CSS">
+          <a class="project-link" href="./projects/stackd.html" aria-label="Explore Stackd">
+            <figure class="project-media"><img src="./assets/images/projects/stackd.jpg" alt="Stackd invoicing website with chunky black outlines, yellow accents, and an invoice dashboard" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>04 / Neo-brutalism</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>Stackd</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">Freelancer invoicing with thick outlines, bright colour, and a live invoice-building demo.</p>
+              <div class="project-tags"><span>Next.js</span><span>React</span><span>TypeScript</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="atelier-nord" data-category="design" data-style="Minimalism / Swiss" data-search="Atelier Nord A bilingual architecture portfolio where a disciplined grid lets the work speak for itself. Architecture studio portfolio Minimalism / Swiss Minimalism Astro TypeScript CSS Markdown">
+          <a class="project-link" href="./projects/atelier-nord.html" aria-label="Explore Atelier Nord">
+            <figure class="project-media"><img src="./assets/images/projects/atelier-nord.jpg" alt="Atelier Nord minimalist architecture portfolio with oversized typography and architectural imagery" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>05 / Minimalism / Swiss</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>Atelier Nord</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A bilingual architecture portfolio where a disciplined grid lets the work speak for itself.</p>
+              <div class="project-tags"><span>Astro</span><span>TypeScript</span><span>CSS</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="lumen" data-category="design" data-style="Glassmorphism" data-search="Lumen A calm budgeting experience with translucent surfaces and an interactive, three-persona dashboard. Personal-finance experience Glassmorphism Glassmorphism SvelteKit Svelte JavaScript SVG">
+          <a class="project-link" href="./projects/lumen.html" aria-label="Explore Lumen">
+            <figure class="project-media"><img src="./assets/images/projects/lumen.jpg" alt="Lumen budgeting landing page with translucent financial cards over pastel colour fields" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>06 / Glassmorphism</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>Lumen</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A calm budgeting experience with translucent surfaces and an interactive, three-persona dashboard.</p>
+              <div class="project-tags"><span>SvelteKit</span><span>Svelte</span><span>JavaScript</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="wildroot" data-category="design" data-style="Organic / hand-drawn" data-search="Wildroot Hand-drawn warmth meets a practical bakery pre-order, collection, and workshop-booking flow. Bakery ordering platform Organic / hand-drawn hand-drawn Next.js React TypeScript SVG">
+          <a class="project-link" href="./projects/wildroot.html" aria-label="Explore Wildroot">
+            <figure class="project-media"><img src="./assets/images/projects/wildroot.jpg" alt="Wildroot bakery website with illustrated sourdough loaves, organic shapes, and handwritten accents" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>07 / Organic / hand-drawn</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>Wildroot</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">Hand-drawn warmth meets a practical bakery pre-order, collection, and workshop-booking flow.</p>
+              <div class="project-tags"><span>Next.js</span><span>React</span><span>TypeScript</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="doodle-math" data-category="design" data-style="Claymorphism" data-search="Doodle Math A playful maths world with clay mascots, adaptive questions, and a thoughtful grown-up experience. Children’s learning platform Claymorphism Claymorphism Astro Svelte TypeScript Howler">
+          <a class="project-link" href="./projects/doodle-math.html" aria-label="Explore Doodle Math">
+            <figure class="project-media"><img src="./assets/images/projects/doodle-math.jpg" alt="Doodle Math learning website with pastel clay characters and a large playful maths headline" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>08 / Claymorphism</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>Doodle Math</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A playful maths world with clay mascots, adaptive questions, and a thoughtful grown-up experience.</p>
+              <div class="project-tags"><span>Astro</span><span>Svelte</span><span>TypeScript</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="the-long-field" data-category="design" data-style="Editorial" data-search="The Long Field A reader-funded magazine prototype built around expressive type and art-directed long-form stories. Independent digital magazine Editorial Editorial HTML CSS JavaScript SVG">
+          <a class="project-link" href="./projects/the-long-field.html" aria-label="Explore The Long Field">
+            <figure class="project-media"><img src="./assets/images/projects/the-long-field.jpg" alt="The Long Field editorial magazine cover with serif typography, columns, and illustrated stories" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>09 / Editorial</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>The Long Field</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A reader-funded magazine prototype built around expressive type and art-directed long-form stories.</p>
+              <div class="project-tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="pulse-27" data-category="design" data-style="Kinetic typography" data-search="PULSE 27 A type-led festival website with a personal schedule, clash detection, and an offline-ready programme. Music &amp; design festival Kinetic typography Kinetic Astro Preact GSAP Workbox">
+          <a class="project-link" href="./projects/pulse-27.html" aria-label="Explore PULSE 27">
+            <figure class="project-media"><img src="./assets/images/projects/pulse-27.jpg" alt="PULSE 27 festival website dominated by large variable lettering and acid-colour accents" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>10 / Kinetic typography</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>PULSE 27</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A type-led festival website with a personal schedule, clash detection, and an offline-ready programme.</p>
+              <div class="project-tags"><span>Astro</span><span>Preact</span><span>GSAP</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="loud-house" data-category="design" data-style="Maximalism" data-search="Loud House A gallery identity turned up to full volume, with exhibition discovery, ticket booking, and calm mode. Contemporary art gallery Maximalism Maximalism Next.js React TypeScript Framer Motion">
+          <a class="project-link" href="./projects/loud-house.html" aria-label="Explore Loud House">
+            <figure class="project-media"><img src="./assets/images/projects/loud-house.jpg" alt="Loud House gallery website with layered oversized typography, collage, and vivid pink and yellow" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>11 / Maximalism</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>Loud House</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A gallery identity turned up to full volume, with exhibition discovery, ticket booking, and calm mode.</p>
+              <div class="project-tags"><span>Next.js</span><span>React</span><span>TypeScript</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="thermo" data-category="design" data-style="Neumorphism" data-search="Thermo Tactile smart-home controls with accessible dials, room schedules, and real-time device-state sync. Smart-home dashboard Neumorphism Neumorphism Astro React TypeScript React Aria WebSocket">
+          <a class="project-link" href="./projects/thermo.html" aria-label="Explore Thermo">
+            <figure class="project-media"><img src="./assets/images/projects/thermo.jpg" alt="Thermo smart-home website with soft raised controls and a circular temperature dial" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>12 / Neumorphism</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>Thermo</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">Tactile smart-home controls with accessible dials, room schedules, and real-time device-state sync.</p>
+              <div class="project-tags"><span>Astro</span><span>React</span><span>TypeScript</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="static-fm" data-category="design" data-style="Retro / Y2K" data-search="Static FM An early-web radio desktop with a persistent player, draggable windows, and a modern accessible shell. Internet radio experience Retro / Y2K Retro SvelteKit Svelte TypeScript Web Audio PWA">
+          <a class="project-link" href="./projects/static-fm.html" aria-label="Explore Static FM">
+            <figure class="project-media"><img src="./assets/images/projects/static-fm.jpg" alt="Static FM retro desktop with bevelled application windows and a radio player" width="1440" height="1000" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>13 / Retro / Y2K</span><span>Concept build</span></p>
+              <div class="project-title-row"><h3>Static FM</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">An early-web radio desktop with a persistent player, draggable windows, and a modern accessible shell.</p>
+              <div class="project-tags"><span>SvelteKit</span><span>Svelte</span><span>TypeScript</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="receipthy" data-category="web" data-style="" data-search="Receipthy A retail product concept connecting digital receipts, loyalty, and purchase insights. AI point of sale &amp; inventory Product design ">
+          <a class="project-link" href="./projects/receipthy.html" aria-label="Explore Receipthy">
+            <figure class="project-media"><img src="./assets/images/receipthy-preview.webp" alt="Receipthy digital receipts and loyalty website" width="960" height="496" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>14 / Product design</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>Receipthy</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A retail product concept connecting digital receipts, loyalty, and purchase insights.</p>
+              <div class="project-tags"><span>AI point of sale &amp; inventory</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="fundprohk" data-category="web" data-style="" data-search="FundProHK A home for funding opportunities, competitions, and the dates that matter. Funding discovery platform Web design ">
+          <a class="project-link" href="./projects/fundprohk.html" aria-label="Explore FundProHK">
+            <figure class="project-media"><img src="./assets/images/fundprohk-preview.webp" alt="FundProHK funding platform with opportunities, competitions, and a calendar" width="960" height="547" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>15 / Web design</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>FundProHK</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A home for funding opportunities, competitions, and the dates that matter.</p>
+              <div class="project-tags"><span>Funding discovery platform</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="hansgieng" data-category="web" data-style="" data-search="Hansgieng AI SaaS An AI SaaS concept introducing traceable answers for legal research. AI legal research AI product ">
+          <a class="project-link" href="./projects/hansgieng.html" aria-label="Explore Hansgieng AI SaaS">
+            <figure class="project-media"><img src="./assets/images/hansgieng-preview.webp" alt="Hansgieng AI website introducing traceable legal answers" width="960" height="813" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>16 / AI product</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>Hansgieng AI SaaS</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">An AI SaaS concept introducing traceable answers for legal research.</p>
+              <div class="project-tags"><span>AI legal research</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="illustify" data-category="web" data-style="" data-search="ILLUSTIFY A bright, expressive website for an AI image-generation prompt concept. AI image-generation prompts Creative tools ">
+          <a class="project-link" href="./projects/illustify.html" aria-label="Explore ILLUSTIFY">
+            <figure class="project-media"><img src="./assets/images/illustify-preview.webp" alt="ILLUSTIFY AI prompt website with pink and yellow typography" width="960" height="596" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>17 / Creative tools</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>ILLUSTIFY</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A bright, expressive website for an AI image-generation prompt concept.</p>
+              <div class="project-tags"><span>AI image-generation prompts</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="aurawave" data-category="web" data-style="" data-search="AuraWave+ A dark, focused product website exploring AI-assisted sound and relaxation. AI sound-therapy concept Wellness product ">
+          <a class="project-link" href="./projects/aurawave.html" aria-label="Explore AuraWave+">
+            <figure class="project-media"><img src="./assets/images/aurawave-preview.webp" alt="AuraWave+ sound-therapy product website with a dark interface" width="960" height="592" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>18 / Wellness product</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>AuraWave+</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A dark, focused product website exploring AI-assisted sound and relaxation.</p>
+              <div class="project-tags"><span>AI sound-therapy concept</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="traderjournalgpt" data-category="web" data-style="" data-search="TraderJournalGPT A financial dashboard exploration for a trading-journal product. Trading journal dashboard Dashboard ">
+          <a class="project-link" href="./projects/traderjournalgpt.html" aria-label="Explore TraderJournalGPT">
+            <figure class="project-media"><img src="./assets/images/project-1-preview.webp" alt="TraderJournalGPT financial dashboard preview" width="600" height="451" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>19 / Dashboard</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>TraderJournalGPT</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A financial dashboard exploration for a trading-journal product.</p>
+              <div class="project-tags"><span>Trading journal dashboard</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="web-pos" data-category="web" data-style="" data-search="Web POS A restaurant-facing website from the Memento POS project collection. Restaurant web experience Web development ">
+          <a class="project-link" href="./projects/web-pos.html" aria-label="Explore Web POS">
+            <figure class="project-media"><img src="./assets/images/mementopos-preview.webp" alt="Restaurant website displaying a featured dish and menu navigation" width="960" height="468" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>20 / Web development</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>Web POS</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A restaurant-facing website from the Memento POS project collection.</p>
+              <div class="project-tags"><span>Restaurant web experience</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="interior-design" data-category="web" data-style="" data-search="Interior Design An image-led website exploration for interiors, furniture, and considered spaces. Interior-design website Web design ">
+          <a class="project-link" href="./projects/interior-design.html" aria-label="Explore Interior Design">
+            <figure class="project-media"><img src="./assets/images/project-3-preview.webp" alt="Interior-design website preview with furniture and room photography" width="600" height="451" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>21 / Web design</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>Interior Design</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">An image-led website exploration for interiors, furniture, and considered spaces.</p>
+              <div class="project-tags"><span>Interior-design website</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="management-dashboard" data-category="apps" data-style="" data-search="Management Dashboard An operational dashboard bringing sales history and transaction totals into view. Sales &amp; transaction management Dashboard ">
+          <a class="project-link" href="./projects/management-dashboard.html" aria-label="Explore Management Dashboard">
+            <figure class="project-media"><img src="./assets/images/mementoposdashboard-preview.webp" alt="Management dashboard displaying sales history and transaction totals" width="960" height="457" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>22 / Dashboard</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>Management Dashboard</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">An operational dashboard bringing sales history and transaction totals into view.</p>
+              <div class="project-tags"><span>Sales &amp; transaction management</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="not-only-tea" data-category="apps" data-style="" data-search="Not Only Tea Weather, tea recommendations, and conversation in one mobile-app exploration. Weather &amp; tea mobile app Mobile app ">
+          <a class="project-link" href="./projects/not-only-tea.html" aria-label="Explore Not Only Tea">
+            <figure class="project-media"><img src="./assets/images/project-8-preview.webp" alt="Not Only Tea mobile screens showing weather, tea recommendations, and chat" width="960" height="659" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>23 / Mobile app</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>Not Only Tea</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">Weather, tea recommendations, and conversation in one mobile-app exploration.</p>
+              <div class="project-tags"><span>Weather &amp; tea mobile app</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="snapchat-clone" data-category="apps" data-style="" data-search="Snapchat Clone A mobile interface study exploring familiar camera and messaging patterns. Social mobile-app study Mobile app ">
+          <a class="project-link" href="./projects/snapchat-clone.html" aria-label="Explore Snapchat Clone">
+            <figure class="project-media"><img src="./assets/images/project-13-preview.webp" alt="Snapchat Clone showing a chat list and camera screen" width="444" height="393" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>24 / Mobile app</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>Snapchat Clone</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A mobile interface study exploring familiar camera and messaging patterns.</p>
+              <div class="project-tags"><span>Social mobile-app study</span></div>
+            </div>
+          </a>
+        </li>
+        <li class="project-card" data-project="wewa" data-category="games" data-style="" data-search="WeWa — Whack-a-mole A playful whack-a-mole game with a bright pink-and-purple mobile identity. Mobile game Game development ">
+          <a class="project-link" href="./projects/wewa.html" aria-label="Explore WeWa — Whack-a-mole">
+            <figure class="project-media"><img src="./assets/images/project-14-preview.webp" alt="Pink and purple start screen for the WeWa whack-a-mole game" width="960" height="1707" loading="lazy" decoding="async"><span class="project-arrow" aria-hidden="true">↗</span></figure>
+            <div class="project-copy">
+              <p class="project-kicker"><span>25 / Game development</span><span>Original work</span></p>
+              <div class="project-title-row"><h3>WeWa — Whack-a-mole</h3><span aria-hidden="true">↗</span></div>
+              <p class="project-summary">A playful whack-a-mole game with a bright pink-and-purple mobile identity.</p>
+              <div class="project-tags"><span>Mobile game</span></div>
+            </div>
+          </a>
+        </li>
+        <!-- PROJECTS:END -->
+      </ul>
+      <p class="collection-note"><span aria-hidden="true">↳</span> The 13 design explorations are functional concept projects for fictional brands. Original projects retain their supplied previews. Open a project for scope, source code, and available demos.</p>
+    </section>
+
+    <section class="about-section section-space" id="about" aria-labelledby="about-title">
+      <div class="wrap about-grid">
+        <div class="about-portrait">
+          <img src="./assets/images/my-avatar-preview.webp" alt="Illustrated portrait of Ivan Tang against a teal sky" width="416" height="416" loading="lazy">
+          <div class="portrait-caption"><span>Ivan Tang</span><span>Hong Kong ↗</span></div>
+        </div>
+        <div class="about-copy">
+          <p class="eyebrow">02 / The person behind the pixels</p>
+          <h2 id="about-title">Curious by nature.<br>A builder by practice.</h2>
+          <p class="lede">I like the space where design, engineering, and a useful idea meet.</p>
+          <p>I’m a Hong Kong-based full-stack developer with a background in data science and a hands-on interest in entrepreneurship. My work spans responsive websites, mobile applications, backend services, and applied AI.</p>
+          <p>This collection brings those interests together: practical tools alongside thirteen explorations of visual style. Different aesthetics, with the same focus on clear interactions and thoughtful implementation.</p>
+          <div class="about-links"><a class="text-link" href="https://github.com/ivantang26" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span><span class="sr-only"> (new tab)</span></a><a class="text-link" href="https://www.linkedin.com/in/ivantang26" target="_blank" rel="noopener noreferrer">LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (new tab)</span></a><a class="text-link" href="#contact">Get in touch <span aria-hidden="true">↗</span></a></div>
+        </div>
+      </div>
+      <div class="wrap capabilities">
+        <article><span class="capability-number">01</span><h3>Design that communicates</h3><p>Distinct visual systems, considered layouts, and interfaces that are easy to find your way around.</p></article>
+        <article><span class="capability-number">02</span><h3>Development that connects</h3><p>Responsive frontends, reliable APIs, and the infrastructure that brings a product together.</p></article>
+        <article><span class="capability-number">03</span><h3>Ideas put into practice</h3><p>Data science, language models, and mobile experiences built around real tasks—not just technology.</p></article>
+      </div>
+    </section>
+
+    <section class="experience-section wrap section-space" id="experience" aria-labelledby="experience-title">
+      <div class="section-heading"><div><p class="eyebrow">03 / Along the way</p><h2 id="experience-title">A little background.<br>A lot of hands-on learning.</h2></div><a class="text-link" href="https://www.linkedin.com/in/ivantang26" target="_blank" rel="noopener noreferrer">Connect on LinkedIn <span aria-hidden="true">↗</span><span class="sr-only"> (new tab)</span></a></div>
+      <div class="resume-grid">
+        <div><h3 class="column-title">Experience</h3><ol class="timeline">
+          <li><span class="timeline-date">Sept 2022 — Present</span><h4>Freelance full-stack developer</h4><p>End-to-end web application delivery, from responsive interfaces to frontend and backend integration.</p></li>
+          <li><span class="timeline-date">Jul — Aug 2024</span><h4>Software engineer · Internship</h4><p>REST APIs and microservices with Kotlin, Java, Kafka, and AWS. Deployment with Kubernetes and Docker, with PostgreSQL, S3, and test-driven development.</p></li>
+          <li><span class="timeline-date">Jul — Aug 2023</span><h4>IT engineer</h4><p>Technical support, troubleshooting, system installation and maintenance, user training, and IT resource management.</p></li>
+        </ol></div>
+        <div><h3 class="column-title">Education</h3><ol class="timeline">
+          <li><span class="timeline-date">2022 — 2025</span><h4>Hong Kong Polytechnic University</h4><p>BSc (Honours) in Data Science and Analytics.</p></li>
+          <li><span class="timeline-date">2024</span><h4>Draper University</h4><p>Cyberport University Partnership Programme (CUPP) Bootcamp.</p></li>
+          <li><span class="timeline-date">2020 — 2022</span><h4>HKU SPACE Community College</h4><p>Higher Diploma in Data Science.</p></li>
+        </ol></div>
+      </div>
+      <div class="toolkit"><h3>My working toolkit</h3><dl><div><dt>Interfaces</dt><dd>React · Next.js · Astro · Svelte · TypeScript</dd></div><div><dt>Backend &amp; cloud</dt><dd>Kotlin · Java · REST APIs · Kafka · AWS</dd></div><div><dt>Infrastructure</dt><dd>Docker · Kubernetes · PostgreSQL · S3</dd></div><div><dt>Data &amp; creative</dt><dd>Data science · Machine learning · Language models · Web design</dd></div></dl></div>
+    </section>
+
+    <section class="contact-section section-space" id="contact" aria-labelledby="contact-title">
+      <div class="wrap contact-grid">
+        <div class="contact-copy"><p class="eyebrow">04 / Start a conversation</p><h2 id="contact-title">Something in mind?<br><em>Let’s build it.</em></h2><p>A product to shape, a website to rethink, or an idea worth exploring. I’d love to hear about it.</p><a class="contact-email" href="mailto:ivantang26official@gmail.com">ivantang26official@gmail.com <span aria-hidden="true">↗</span></a><div class="contact-direct"><a href="tel:+85290288272">+852 9028 8272</a><span>Sha Tin, Hong Kong</span></div><a class="text-link" href="https://wa.me/85290288272" target="_blank" rel="noopener noreferrer">Or say hello on WhatsApp <span aria-hidden="true">↗</span><span class="sr-only"> (new tab)</span></a></div>
+        <form class="contact-form" action="mailto:ivantang26official@gmail.com" method="post" enctype="text/plain" aria-labelledby="form-title" aria-describedby="form-help" data-form>
+          <h3 id="form-title">Tell me a little about your idea.</h3><p class="form-help" id="form-help">This prepares a draft in your email app. Nothing is sent until you review and send it.</p>
+          <div class="form-row"><div class="form-field"><label for="fullname">Your name</label><input id="fullname" name="fullname" autocomplete="name" placeholder="Alex Chan" maxlength="100" required aria-describedby="fullname-error" data-form-input><p class="field-error" id="fullname-error" hidden></p></div><div class="form-field"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" placeholder="alex@example.com" maxlength="254" required aria-describedby="email-error" data-form-input><p class="field-error" id="email-error" hidden></p></div></div>
+          <div class="form-field"><label for="message">What are you working on?</label><textarea id="message" name="message" placeholder="Your idea, a rough timeline, or just a hello…" rows="4" maxlength="1500" required aria-describedby="message-hint message-error" data-form-input></textarea><p class="field-hint" id="message-hint">A short introduction is plenty. Up to 1,500 characters.</p><p class="field-error" id="message-error" hidden></p></div>
+          <button class="button" type="submit">Prepare an email <span aria-hidden="true">↗</span></button>
+          <div class="form-result" data-form-result hidden><p role="status" data-form-status></p><a class="text-link" data-email-draft>Open email draft <span aria-hidden="true">↗</span></a><p class="field-hint">No email app? Copy your message and email the address above.</p></div>
+        </form>
+      </div>
+    </section>
   </main>
 
-
-
-
-
-
-  <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
-    - ionicon link
-  -->
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
+  <footer class="site-footer wrap">
+    <div class="footer-top"><a class="wordmark" href="./">ivan tang<span aria-hidden="true">✳</span></a><p>Thoughtfully designed. Carefully built.</p><a class="text-link" href="#main-content">Back to top <span aria-hidden="true">↑</span></a></div>
+    <div class="footer-bottom"><p>© <span data-year>2026</span> Ivan Tang</p><div class="footer-social"><a href="https://github.com/ivantang26" target="_blank" rel="noopener noreferrer">GitHub ↗<span class="sr-only"> (new tab)</span></a><a href="https://www.linkedin.com/in/ivantang26" target="_blank" rel="noopener noreferrer">LinkedIn ↗<span class="sr-only"> (new tab)</span></a><a href="https://ivantang26.carrd.co/" target="_blank" rel="noopener noreferrer">More links ↗<span class="sr-only"> (new tab)</span></a><a href="https://www.twitter.com/ivantang26" target="_blank" rel="noopener noreferrer">X / Twitter ↗<span class="sr-only"> (new tab)</span></a></div></div>
+    <div class="legal-notes"><details><summary>Privacy</summary><p>This portfolio uses no analytics or cookies. Fonts and previews are hosted locally. Search and filter choices appear in the URL. The contact form prepares an email locally; your email app handles sending. External websites have their own privacy practices.</p></details><details><summary>About the work</summary><p>Design explorations are concept projects for fictional brands. Original portfolio entries use their supplied screenshots; unverified technology stacks and live links are not invented. Product names and third-party materials belong to their respective owners. Website source is covered by the <a href="https://github.com/ivantang26/Portfolio.io/blob/main/LICENSE">MIT license</a>.</p></details></div>
+  </footer>
 </body>
-
 </html>
