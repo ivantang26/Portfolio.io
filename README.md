@@ -116,6 +116,13 @@ Screenshots and axe results are written to ignored **`.test-artifacts/`**. These
 
 ## Deployment
 
+The site is static and deploys to two hosts from the same `main` branch:
+
+- **Vercel (production):** <https://portfolio-io-ivantangs-projects.vercel.app>
+- **GitHub Pages:** <https://ivantang26.github.io/Portfolio.io/>
+
+Every push to `main` triggers both. Vercel runs `npm run build` and serves `public/`; GitHub Pages publishes the repository root unchanged.
+
 ### GitHub Pages
 
 Publish the repository root as a static site. Generated pages and previews are already present; **no build command is required** for GitHub Pages. Do not publish `node_modules`, `public`, or `.test-artifacts`.
