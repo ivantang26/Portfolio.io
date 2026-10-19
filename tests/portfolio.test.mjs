@@ -287,4 +287,29 @@ test('no-JavaScript and direct-file previews retain all content and project link
   await filePage.close();
 });
 
+test('the build emits the public/ output directory that Vercel serves', async () => {
+  // Vercel fails with "No Output Directory named public found after the Build
+  // completed" when the build only rewrites files at the repository root.
+  const config = JSON.parse(await readFile(new URL('../vercel.json', import.meta.url), 'utf8'));
+  assert.equal(config.buildCommand, 'npm run build');
+  assert.equal(config.outputDirectory, 'public');
+
+  const { buildSite } = await import('../scripts/build-site.mjs');
+  const summary = await buildSite();
+  assert.equal(summary.pages, projects.length + 2);
+  assert.ok(summary.files > projects.length + 2);
+
+  const published = relative => readFile(new URL(`../public/${relative}`, import.meta.url), 'utf8');
+  assert.equal((await published('index.html')).match(/class="project-card"/g).length, 25);
+  for (const project of projects) {
+    assert.ok((await published(`projects/${project.slug}.html`)).includes(`<h1>${project.title}</h1>`), project.slug);
+  }
+  const notFound = await published('404.html');
+  assert.match(notFound, /<base href="\/">/);
+  assert.doesNotMatch(notFound, /Portfolio\.io/);
+  for (const leaked of ['scripts/serve.mjs', 'data/projects.json', 'package.json']) {
+    await assert.rejects(published(leaked), /ENOENT/, `${leaked} must not be published`);
+  }
+});
+
 test('no browser runtime errors or broken local resources', () => { assert.deepEqual(errors, []); });

@@ -53,9 +53,11 @@ data/projects.json             Project content, source folders, links, image met
 data/preview-sources.json      Screenshot source URLs, titles, and capture timestamps
 projects/*.html                25 generated, directly addressable project pages
 scripts/build-projects.mjs      Dependency-free static project-page generator
+scripts/build-site.mjs          Assembles the deployable Vercel artifact in public/
 scripts/serve.mjs               Dependency-free local preview server
 scripts/capture-previews.mjs    Optional Playwright screenshot refresh tool
 tests/portfolio.test.mjs        Browser, content, interaction, and accessibility tests
+vercel.json                    Vercel build command and output directory
 ```
 
 ## Editing projects
@@ -71,6 +73,8 @@ npm run check
 ```
 
 The generator updates only the marked gallery/style regions and count fields in `index.html`, and generates the individual project pages. Do not edit `projects/*.html` directly. Main-page copy and layout are edited in `index.html` outside those markers.
+
+`npm run build` regenerates the project pages and then assembles the deployable `public/` folder. `npm run check` verifies that the committed pages match `data/projects.json`; it does not touch `public/`.
 
 When the sibling `Sample-Portfolio` folder exists, the generator checks that every project directory is represented. It also checks unique slugs, required content, asset existence, and HTTPS URLs. `npm run check` verifies that committed output matches the data.
 
@@ -112,7 +116,9 @@ Screenshots and axe results are written to ignored **`.test-artifacts/`**. These
 
 ## Deployment
 
-Publish this folder as a static site. Generated pages and previews are already present; **no build command is required** for GitHub Pages. Do not publish `node_modules` or `.test-artifacts`.
+### GitHub Pages
+
+Publish the repository root as a static site. Generated pages and previews are already present; **no build command is required** for GitHub Pages. Do not publish `node_modules`, `public`, or `.test-artifacts`.
 
 For a different public hostname/path, update:
 
@@ -121,6 +127,27 @@ For a different public hostname/path, update:
 - The `<base href="/Portfolio.io/">` in `404.html`.
 
 Relative project, font, stylesheet, script, and image URLs already work at either the domain root or a repository subpath.
+
+### Vercel
+
+Vercel requires a build output directory, which is why a build that only rewrites files at the repository root fails with `No Output Directory named "public" found after the Build completed`. `npm run build` therefore ends with `scripts/build-site.mjs`, which:
+
+1. Copies `index.html`, `404.html`, `assets/`, and `projects/` into `public/`.
+2. Rewrites the `404.html` `<base>` from the GitHub Pages subpath to `/`, since a Vercel deployment serves the domain root.
+3. Fails the build if any local link, project page, or preview image would be missing — so a broken artifact never reaches the CDN.
+
+`vercel.json` pins that contract:
+
+```json
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "public"
+}
+```
+
+`public/` is generated and git-ignored: never edit or commit it. Import the repository in Vercel and leave the dashboard's Output Directory on `public` (its default) or let `vercel.json` set it. No runtime npm dependency, serverless function, or environment variable is needed, and every deployment serves the domain root, so the relative asset URLs work without the `/Portfolio.io/` prefix.
+
+To inspect the artifact before deploying, run `npm run build` and serve `public/` with any static server.
 
 ## Contact and privacy
 
